@@ -11,7 +11,7 @@
                         <b-col cols="12" class="mt-2 mb-2">
                             <b-card>
                                 <div class="d-flex align-items-center">
-                                    <h5 class="ml-1">Emotions:</h5>
+                                    <h5 class="ml-1" style="margin-bottom: 0;">Emotions:</h5>
                                     <div class="d-flex text-center">
                                         <div class="block">
                                             <p style="margin:0.5rem !important" class="text-in-block">{{ resultPredict.purport }}</p>
