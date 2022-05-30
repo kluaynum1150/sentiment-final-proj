@@ -21,9 +21,9 @@
                         </div>
                     </div>
                     <div v-else class="d-flex text-center mb-4 justify-content-center">
-                        <div :class="['block-emotion',resultPredict.pre]">
-                            <img :src="'../reaction-icon/'+resultPredict.pre+'.png'" :alt="resultPredict.pre" style="width: 100px;height: 100px;margin: 0.5rem;">
-                            <p class="text-in-block">{{ resultPredict.pre }}</p>
+                        <div :class="['block-emotion',detailPrediction.pre]">
+                            <img :src="'../reaction-icon/'+detailPrediction.pre+'.png'" :alt="detailPrediction.pre" style="width: 100px;height: 100px;margin: 0.5rem;">
+                            <p class="text-in-block">{{ detailPrediction.pre }}</p>
                         </div>
                     </div>
                 </b-card>
