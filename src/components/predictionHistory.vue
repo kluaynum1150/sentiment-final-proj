@@ -1,6 +1,6 @@
 <template>
   <div>
-      <div v-if="loadingList" class="d-flex align-items-center justify-content-center text-primary my-2" style="height: 550px;flex-direction:column;">
+      <div v-if="loadingList" class="d-flex align-items-center justify-content-center text-primary my-2" style="height: 400px;flex-direction:column;">
             <b-spinner style="width: 6rem; height: 6rem;" class="mb-6" variant="primary"></b-spinner>
             <strong style="font-size:x-large;">Loading...</strong>
       </div>
@@ -16,7 +16,7 @@
                 </div>
             </div>
         </div>
-        <div v-else class="block text-muted d-flex align-items-center justify-content-center text-primary my-2" style="height: 550px;flex-direction:column;">
+        <div v-else class="block text-muted d-flex align-items-center justify-content-center text-primary my-2" style="height: 400px;flex-direction:column;">
             <h2>No data</h2>
         </div>
         <b-pagination 
