@@ -1,6 +1,10 @@
 <template>
     <div class="m-2">
-        <b-row>
+        <div v-if="loadingHistory" class="d-flex align-items-center justify-content-center text-primary my-2" style="height: 550px;flex-direction:column;">
+            <b-spinner style="width: 6rem; height: 6rem;" class="mb-6" variant="primary"></b-spinner>
+            <strong style="font-size:x-large;">Loading...</strong>
+        </div>
+        <b-row v-else>
             <b-col cols="12" sm="6">
                 <b-card>
                     <b-card-title class="text-center">Prediction result</b-card-title>
@@ -52,6 +56,7 @@ export default {
     ],
     data (){
         return {
+            loadingHistory: false,
             detail: {
                 text: 'content of post...',
                 emotion: 'Generally wholesome post',
@@ -108,7 +113,10 @@ export default {
         }
     },
     created() {
-        this.fetchDetailPrediction(this.idPost)
+        this.loadingHistory = true
+        this.fetchDetailPrediction(this.idPost).then(()=>{
+            this.loadingHistory = false
+        })
     },
     computed: {
         ...mapGetters([getterTypes.DETAIL_PREDICTION]),
